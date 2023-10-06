@@ -1,7 +1,9 @@
 const express = require('express');
 const { resiController } = require('../controllers');
-const router = express.Router();
+const resiRouter = express.Router('');
 
-router.get('/resi', resiController.getResi);
+resiRouter.get('/resi', resiController.getResi);
 
-module.exports = router;
+resiRouter.get('/resi/:noResi', resiController.getResiByNoResi);
+
+module.exports = resiRouter;

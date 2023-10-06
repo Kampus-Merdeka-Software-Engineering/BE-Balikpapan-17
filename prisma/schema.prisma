@@ -11,13 +11,13 @@ datasource db {
 }
 
 model Resi {
-  id Int @id @default(autoincrement())
-  resi String @unique
-  namapengirim String?
-  namapenerima String?
+  id             Int     @id @default(autoincrement())
+  resi           String  @unique
+  namapengirim   String?
+  namapenerima   String?
   alamatpengirim String?
   alamatpenerima String?
-  telp_pengirim String?
-  telp_penerima String?
-  berat Int? 
+  telp_pengirim  String?
+  telp_penerima  String?
+  berat          Int?
 }
