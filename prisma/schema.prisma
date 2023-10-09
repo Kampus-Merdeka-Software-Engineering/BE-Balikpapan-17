@@ -15,9 +15,18 @@ model Resi {
   resi           String  @unique
   namapengirim   String?
   namapenerima   String?
-  alamatpengirim String?
-  alamatpenerima String?
-  telp_pengirim  String?
-  telp_penerima  String?
-  berat          Int?
+  status         String?
+}
+
+model Orderr {
+  id_order        Int @id @default(autoincrement())
+  createAt        DateTime @default(now())
+  penerima        String?
+  pengirim        String?
+  alamatPenerima  String?
+  alamatPengirim  String?
+  telp_Pengirim   String?
+  telp_Penerima   String?
+  berat           Int?
+  keterangan      String
 }
